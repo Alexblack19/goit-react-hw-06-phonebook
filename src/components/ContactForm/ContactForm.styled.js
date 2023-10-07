@@ -21,7 +21,7 @@ export const Input = styled.input`
 `;
 
 export const Submit = styled.button`
-  max-width: 120px;
+  width: 100px;
   padding: 5px 7px;
   font-size: 14px;
   cursor: pointer;

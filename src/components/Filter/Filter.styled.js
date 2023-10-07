@@ -7,6 +7,11 @@ export const Label = styled.label`
   padding-bottom: 20px;
 `;
 
+export const Input = styled.input`
+  height: 32px;
+  border-radius: 5px;
+`;
+
 export const Span = styled.span`
   margin-bottom: 10px;
 `;

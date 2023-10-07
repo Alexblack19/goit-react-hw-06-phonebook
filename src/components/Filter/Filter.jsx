@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
-import {Label, Span} from './Filter.styled'
+import { Input, Label, Span } from './Filter.styled';
 
 export function Filter({ valueFilter, onChangeFilter }) {
   return (
     <Label>
       <Span> Find contacts by name </Span>
-      <input
+      <Input
         placeholder="Search"
         type="text"
         value={valueFilter}

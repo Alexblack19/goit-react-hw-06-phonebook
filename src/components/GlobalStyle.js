@@ -42,6 +42,7 @@ export const Container = styled.div`
   margin-right: auto;
   padding: 40px;
   font-size: 18px;
+  border-radius: 10px;
   background-image: radial-gradient(
     circle at 50% -20.71%,
     #ffffff 0,
@@ -63,5 +64,5 @@ export const MainTitle = styled.h1`
 
 export const Title = styled.h2`
   font-size: 28px;
-  text-align: center;  
+  text-align: center;
 `;
