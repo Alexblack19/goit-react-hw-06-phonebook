@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import {Name, Number, Button} from './Contact.styled'
+import { Name, Number, Button } from './Contact.styled';
 
-export const Contact = ({ item: { id, name, number }, deleteContact }) => {  
+export const Contact = ({ item: { id, name, number }, deleteContact }) => {
   return (
     <>
       <Name>{name}&#58;</Name>
