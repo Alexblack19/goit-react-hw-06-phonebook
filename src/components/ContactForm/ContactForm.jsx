@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import PropTypes from 'prop-types';
+
 import { Form, Label, Span, Input, Submit } from './ContactForm.styled.js';
 
 export function ContactForm({ onFormSubmit }) {
@@ -64,10 +64,3 @@ export function ContactForm({ onFormSubmit }) {
     </Form>
   );
 }
-
-ContactForm.propTypes = {
-  state: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    number: PropTypes.string.isRequired,
-  }),
-};

@@ -1,8 +1,8 @@
 import { Contact } from '../Contact/Contact';
-import PropTypes from 'prop-types';
+
 import { List, Item, Text } from './ContactList.styled';
 
-export function ContactList({ filterContacts, deleteContact }) {  
+export function ContactList({ filterContacts, deleteContact }) {
   return (
     <>
       {filterContacts.length ? (
@@ -19,10 +19,3 @@ export function ContactList({ filterContacts, deleteContact }) {
     </>
   );
 }
-
-ContactList.propTypes = {
-  filterContacts: PropTypes.arrayOf(
-    PropTypes.shape({ id: PropTypes.string.isRequired }).isRequired
-  ).isRequired,
-  deleteContact: PropTypes.func.isRequired,
-};
