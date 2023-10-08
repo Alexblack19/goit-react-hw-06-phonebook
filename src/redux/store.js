@@ -1,3 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
 
-export const store = configureStore({ reducer: { contacts: '' } });
+export const store = configureStore({
+  reducer: {
+    contacts: [],
+    filter: '',
+  },
+});
