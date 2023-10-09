@@ -17,6 +17,7 @@ export function App() {
   }, [contacts]);
 
   const formSubmitHandler = dataForm => {
+    console.log(dataForm);
     contacts.some(
       contact => contact.name.toLowerCase() === dataForm.name.toLowerCase()
     )
