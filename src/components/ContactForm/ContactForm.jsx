@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { nanoid } from 'nanoid';
-import { useDispatch } from 'react-redux';
-import { addContact } from '../../redux/contactSlice';
+import { useSelector, useDispatch } from 'react-redux';
+import { addContact, getContacts } from '../../redux/contactSlice';
 import { Form, Label, Span, Input, Submit } from './ContactForm.styled.js';
+import Notiflix from 'notiflix';
 
 export function ContactForm() {
-  const dispatch = useDispatch();
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
@@ -23,11 +23,25 @@ export function ContactForm() {
     }
   }
 
+  const dispatch = useDispatch();
+  const contacts = useSelector(getContacts);
+
   function handleSubmit(e) {
     e.preventDefault();
     const newContact = { id: nanoid(), name, number };
-    dispatch(addContact(newContact));
+
+    contacts.some(contact => contact.name.toLowerCase() === name.toLowerCase())
+      ? Notification(name)
+      : dispatch(addContact(newContact));
+
     clearForm();
+  }
+
+  function Notification(name) {
+    Notiflix.Notify.warning(`${name} is already in your contact list.`, {
+      position: 'center-center',
+      fontSize: '16px',
+    });
   }
 
   function clearForm() {
